@@ -25,11 +25,11 @@ steps:
     echo 'Hello World!'
   displayName: 'test hello world'
 
-- bash: echo 'Hello Script World' > ${Build.StagingDirectory}/HelloWorld.txt
+- bash: echo 'Hello Script World' >> HelloWorld.txt
+- bash: ls
 - task: CopyFiles@2
   inputs:
-    Contents: './HelloWorld.txt'
-    sourceFolder: $(Build.StagingDirectory)
+    Contents: 'HelloWorld.txt'
     targetFolder: $(Build.ArtifactStagingDirectory)
 - task: PublishBuildArtifacts@1
   inputs:
