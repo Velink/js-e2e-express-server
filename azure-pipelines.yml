@@ -37,3 +37,14 @@ steps:
     artifactName: 'text-file'
 
 - script: cat '$(Build.ArtifactStagingDirectory)/HelloWorld.txt'
+
+
+- task: DownloadBuildArtifacts@0
+  displayName: downloading artifact
+  inputs:
+    buildType: 'current'
+    downloadType: 'single'
+    artifactName: 'hello-world-txt-file'
+    downloadPath: '$(System.ArtifactsDirectory)'
+
+- bash: cat '$(System.ArtifactsDirectory)/HelloWorld.txt'
