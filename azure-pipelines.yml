@@ -25,13 +25,14 @@ steps:
     echo 'Hello World!'
   displayName: 'test hello world'
 
+- bash: echo 'Hello World' >> HelloWorld.txt
 - task: CopyFiles@2
   inputs:
-    Contents: './helloWorld.txt'
+    Contents: './HelloWorld.txt'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
   inputs:
     pathToPublish: '$(Build.ArtifactStagingDirectory)'
     artifactName: 'text-file'
 
-- script: cat '$(Build.ArtifactStagingDirectory)/helloWorld.txt'
+- script: cat '$(Build.ArtifactStagingDirectory)/HelloWorld.txt'
