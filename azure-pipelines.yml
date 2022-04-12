@@ -29,7 +29,7 @@ steps:
 - bash: ls
 - task: CopyFiles@2
   inputs:
-    Contents: 'HelloWorld.txt'
+    Contents: './HelloWorld.txt'
     targetFolder: $(Build.ArtifactStagingDirectory)
 - task: PublishBuildArtifacts@1
   inputs:
