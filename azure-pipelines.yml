@@ -29,10 +29,11 @@ steps:
 - task: CopyFiles@2
   inputs:
     Contents: './HelloWorld.txt'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    sourceFolder: $(Build.SourcesDirectory)
+    targetFolder: $(Build.ArtifactStagingDirectory)
 - task: PublishBuildArtifacts@1
   inputs:
-    pathToPublish: '$(build.artifactstagingdirectory)'
+    pathToPublish: '$(Build.ArtifactStagingDirectory)'
     artifactName: 'text-file'
 
 - script: cat '$(Build.ArtifactStagingDirectory)/HelloWorld.txt'
