@@ -25,7 +25,7 @@ steps:
     echo 'Hello World!'
   displayName: 'test hello world'
 
-- bash: echo 'Hello Script World' > HelloWorld.txt
+- bash: touch HelloWorld.txt && echo 'Hello Script World' > HelloWorld.txt
 - task: CopyFiles@2
   inputs:
     Contents: './HelloWorld.txt'
