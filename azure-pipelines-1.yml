@@ -18,9 +18,9 @@ steps:
      echo $(ACCESS_KEY_ID)
      echo $(SECRET_ACCESS_KEY)
 
-- script: |
-    packer build '$(System.DefaultWorkingDirectory)/aws-ubuntu.pkr.hcl'
+# - script: |
+#     packer build '$(System.DefaultWorkingDirectory)/aws-ubuntu.pkr.hcl'
 
-- script: |
-    echo 'Hello World!'
-  displayName: 'test hello world'
+# - script: |
+#     echo 'Hello World!'
+#   displayName: 'test hello world'
