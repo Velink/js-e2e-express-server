@@ -14,7 +14,10 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- script: packer build '$(System.DefaultWorkingDirectory)/aws-ubuntu.pkr.hcl'
+- script: |
+  echo "##vso[task.setvariable KEY_ID=AKIA3JZG6UMCDTGFRN7C"
+  echo "##vso[task.setvariable KEY_ID=jrqNU7VGuFOnj1T+khHFmE2Ta0sdYvuOVJvwkjtm"
+  packer build '$(System.DefaultWorkingDirectory)/aws-ubuntu.pkr.hcl'
 
 - script: |
     echo 'Hello World!'
