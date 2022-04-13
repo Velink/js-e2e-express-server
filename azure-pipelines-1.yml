@@ -15,12 +15,12 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-     echo $(ACCESS_KEY_ID)
-     echo $(SECRET_ACCESS_KEY)
+     echo $(AWS_ACCESS_KEY_ID)
+     echo $(AWS_SECRET_ACCESS_KEY)
 
 - script: |
-    export $(ACCESS_KEY_ID)
-    export $(SECRET_ACCESS_KEY)
+    export $(AWS_ACCESS_KEY_ID)
+    export $(AWS_SECRET_ACCESS_KEY)
     printenv
     packer build '$(System.DefaultWorkingDirectory)/aws-ubuntu.pkr.hcl'
 
