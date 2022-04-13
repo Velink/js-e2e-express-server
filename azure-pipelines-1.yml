@@ -13,7 +13,7 @@ steps:
 - task: PackerBuild@1
   inputs:
     templateType: 'custom'
-    customTemplateLocation: '$(System.DefaultWorkingDirectory)/aws-ubuntu.pkr.hcl'
+    - script: packer build '$(System.DefaultWorkingDirectory)/aws-ubuntu.pkr.hcl'
 
 - script: |
     npm install
