@@ -10,16 +10,10 @@ steps:
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
+
 - task: PackerBuild@1
+  displayName: 'Packer build'
   inputs:
-    templateType: 'custom'
-    - script: packer build '$(System.DefaultWorkingDirectory)/aws-ubuntu.pkr.hcl'
+    targetType: 'inline'
+    script: 'packer build '$(System.DefaultWorkingDirectory)/aws-ubuntu.pkr.hcl'
 
-- script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
-
-- script: |
-    echo 'Hello World!'
-  displayName: 'test hello world'
