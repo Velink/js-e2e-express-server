@@ -15,11 +15,12 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-  echo "##vso[task.setvariable KEY_ID=AKIA3JZG6UMCDTGFRN7C"
-  echo "##vso[task.setvariable KEY_ID=jrqNU7VGuFOnj1T+khHFmE2Ta0sdYvuOVJvwkjtm"
-  packer build '$(System.DefaultWorkingDirectory)/aws-ubuntu.pkr.hcl'
+     echo $(ACCESS_KEY_ID)
+     echo $(SECRET_ACCESS_KEY)
+
+- script: |
+    packer build '$(System.DefaultWorkingDirectory)/aws-ubuntu.pkr.hcl'
 
 - script: |
     echo 'Hello World!'
   displayName: 'test hello world'
-
