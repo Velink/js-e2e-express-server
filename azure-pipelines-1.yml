@@ -19,8 +19,9 @@ steps:
      echo $(SECRET_ACCESS_KEY)
 
 - script: |
-    export echo $(ACCESS_KEY_ID)
-    export echo $(SECRET_ACCESS_KEY)
+    export $(ACCESS_KEY_ID)
+    export $(SECRET_ACCESS_KEY)
+    printenv
     packer build '$(System.DefaultWorkingDirectory)/aws-ubuntu.pkr.hcl'
 
 # - script: |
