@@ -1,0 +1,25 @@
+trigger:
+- main
+
+variables:
+  - group: ACCESS_KEYS
+
+pool:
+  name: Default
+  vmImage: ubuntu-latest
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+
+- script: |
+     echo $(AWS_ACCESS_KEY_ID)
+     echo $(AWS_SECRET_ACCESS_KEY)
+
+- script: |
+    export $(AWS_ACCESS_KEY_ID)
+    export $(AWS_SECRET_ACCESS_KEY)
+    printenv
+    packer build '$(System.DefaultWorkingDirectory)/aws-ubuntu.pkr.hcl'
