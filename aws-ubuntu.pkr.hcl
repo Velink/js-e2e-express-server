@@ -24,8 +24,15 @@ source "amazon-ebs" "ubuntu" {
 }
 
 build {
-  name    = "learn-packer"
+  name = "learn-packer"
   sources = [
     "source.amazon-ebs.ubuntu"
   ]
+
+  provisioner "ansible" {
+    playbook_file = "./ansible/install_nginx.yaml"
+  }
 }
+
+
+
