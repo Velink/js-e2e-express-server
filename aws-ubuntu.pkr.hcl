@@ -30,7 +30,7 @@ build {
   ]
 
   provisioner "ansible" {
-    playbook_file = "./install_nginx.yaml"
+    playbook_file = "/Users/velinkalenderski/Downloads/vsts-agent-osx-x64-2.202.0/_work/4/s/install_nginx.yml"
   }
 }
 
