@@ -30,4 +30,5 @@ steps:
       export $(AWS_ACCESS_KEY_ID)
       export $(AWS_SECRET_ACCESS_KEY)
       printenv
+      cat install_nginx.yml
       packer build '$(System.DefaultWorkingDirectory)/aws-ubuntu.pkr.hcl'
