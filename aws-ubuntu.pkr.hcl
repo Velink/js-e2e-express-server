@@ -32,7 +32,8 @@ build {
   provisioner "ansible" {
     playbook_file = "/Users/velinkalenderski/Downloads/vsts-agent-osx-x64-2.202.0/_work/4/s/install_nginx.yml"
   }
+
+  provisioner "shell" {
+    inline = ["mkdir /tmp/ssm", "cd /tmp/ssm", "wget https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/debian_amd64/amazon-ssm-agent.deb", "sudo dpkg -i amazon-ssm-agent.deb", "sudo systemctl enable amazon-ssm-agent"]
+  }
 }
-
-
-
