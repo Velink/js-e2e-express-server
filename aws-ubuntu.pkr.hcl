@@ -34,6 +34,6 @@ build {
   }
 
   provisioner "shell" {
-    inline = ["sudo chmod -R 777 /usr/local/bin/", "curl -L https://github.com/aelsabbahy/goss/releases/latest/download/goss-linux-amd64 -o /usr/local/bin/goss", "sudo chmod +rx /usr/local/bin/goss", "ls", "goss validate"]
+    inline = ["sudo chmod -R 777 /usr/local/bin/", "curl -L https://github.com/aelsabbahy/goss/releases/latest/download/goss-linux-amd64 -o /usr/local/bin/goss", "sudo chmod +rx /usr/local/bin/goss", "ls", "pwd", "sudo cd /Users/velinkalenderski/Downloads/vsts-agent-osx-x64-2.202.0/_work/4/s/", "ls", "goss validate"]
   }
 }
