@@ -30,7 +30,7 @@ build {
   ]
 
   provisioner "ansible" {
-    playbook_file = "$(System.DefaultWorkingDirectory)/install_nginx.yaml"
+    playbook_file = "./install_nginx.yaml"
   }
 }
 
