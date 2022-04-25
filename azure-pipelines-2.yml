@@ -38,8 +38,5 @@ steps:
   - script: |
       docker run \
         base-image sh -c '''\
-        ls
-        packer
-        which packer
         packer build aws-ubuntu.pkr.hcl
         '''
