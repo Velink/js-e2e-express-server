@@ -34,4 +34,5 @@ steps:
       cd $(System.DefaultWorkingDirectory)
       pwd
       ls
+      mv goss.yaml /home/ubuntu
       packer build '$(System.DefaultWorkingDirectory)/aws-ubuntu.pkr.hcl'
