@@ -40,7 +40,7 @@ steps:
         base-image sh -c '''\
         ls
         pwd
-        export PATH=$PATH:~/packer/
+        export PATH=$PATH:/usr/local/bin/packer/
         which packer
         packer build aws-ubuntu.pkr.hcl
         '''
