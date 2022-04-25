@@ -38,8 +38,6 @@ steps:
   - script: |
       docker run \
         base-image sh -c '''\
-        ls
-        pwd
         cd /usr/local/bin
         ls
         '''
