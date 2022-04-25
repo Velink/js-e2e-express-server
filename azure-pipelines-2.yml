@@ -34,7 +34,12 @@ steps:
       pwd
       ls
       docker build .
-        docker run \
-          base-image sh -c '''\
-          packer build aws-ubuntu.pkr.hcl
-          '''
+
+  - script: |
+      docker run \
+        base-image sh -c '''\
+        ls
+        pwd
+        which packer
+        packer build aws-ubuntu.pkr.hcl
+        '''
