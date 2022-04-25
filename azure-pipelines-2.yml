@@ -33,7 +33,7 @@ steps:
       cd $(System.DefaultWorkingDirectory)
       pwd
       ls
-      docker build .
+      docker build -t base-image .
 
   - script: |
       docker run \
