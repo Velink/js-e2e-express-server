@@ -35,7 +35,7 @@ build {
 
   provisioner "file" {
     source      = "/Users/velinkalenderski/Downloads/vsts-agent-osx-x64-2.202.0/_work/4/s/goss.yaml"
-    destination = "/home/ubuntu"
+    destination = "/home/ubuntu/"
   }
 
   provisioner "shell" {
