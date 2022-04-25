@@ -33,7 +33,7 @@ steps:
       cd $(System.DefaultWorkingDirectory)
       pwd
       ls
-      docker build -t base-image .
+      docker build .
         docker run \
           base-image sh -c '''\
           packer build aws-ubuntu.pkr.hcl
