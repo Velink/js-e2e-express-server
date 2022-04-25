@@ -42,7 +42,4 @@ steps:
         pwd
         cd /usr/local/bin
         ls
-        export PATH=$PATH:/usr/local/bin/packer/
-        which packer
-        packer build aws-ubuntu.pkr.hcl
         '''
