@@ -42,6 +42,8 @@ steps:
         --env AWS_SECRET_ACCESS_KEY=$(AWS_SECRET_ACCESS_KEY) \
         base-image sh -c '''\
         cd /app
+        pwd
+        ls
         packer init aws-ubuntu.pkr.hcl
         packer build aws-ubuntu.pkr.hcl
         '''
