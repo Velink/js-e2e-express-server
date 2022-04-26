@@ -28,8 +28,4 @@ build {
   sources = [
     "source.amazon-ebs.ubuntu"
   ]
-
-  provisioner "ansible" {
-    playbook_file = "/app/install_nginx.yml"
-  }
 }
