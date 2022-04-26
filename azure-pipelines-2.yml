@@ -1,6 +1,9 @@
 trigger:
 - main
 
+variables:
+  - group: ACCESS_KEYS
+
 pool:
   name: Default
   vmImage: ubuntu-latest
