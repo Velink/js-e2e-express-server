@@ -40,5 +40,6 @@ steps:
         -v /$(System.DefaultWorkingDirectory):/app \
         base-image sh -c '''\
         cd /app
+        packer init
         packer build aws-ubuntu.pkr.hcl
         '''
