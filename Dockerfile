@@ -1,13 +1,19 @@
-FROM alpine:latest
+FROM ubuntu
+# Install wget and unzip
+RUN apt-get update --yes \
+  && apt-get install --yes curl unzip
 
-RUN apk update \
-    && apk add curl gzip bash git \
-    && curl https://releases.hashicorp.com/packer/1.6.2/packer_1.6.2_linux_amd64.zip | gunzip > /bin/packer \
-    && chmod 0770 /bin/packer
+# Install Packer
 
+ENV PACKER_BIN_DIR /usr/local/packer/bin
+RUN mkdir --parents $PACKER_BIN_DIR 
 
-COPY ./ /opt/
+ENV PACKER_ZIP=https://releases.hashicorp.com/packer/0.9.0/packer_0.9.0_linux_amd64.zip
+RUN curl -sSLo /tmp/packer.zip $PACKER_ZIP && \
+  unzip /tmp/packer.zip -d $PACKER_BIN_DIR && \
+  rm /tmp/packer.zip
 
-WORKDIR /opt
+ENV PATH $PATH:$PACKER_BIN_DIR
 
-ENTRYPOINT ["/bin/bash", "entrypoint.sh"]
+# check that packer is correctly installed
+RUN type packer
