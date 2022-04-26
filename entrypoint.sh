@@ -2,4 +2,4 @@
 
 set -x
 
-/bin/packer build aws-ubuntu.pkr.hcl
+packer build aws-ubuntu.pkr.hcl
