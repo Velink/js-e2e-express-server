@@ -2,4 +2,4 @@
 
 set -x
 
-packer build aws-ubuntu.pkr.hcl
+/bin/packer build buildagent_ubuntu_18.json
