@@ -30,6 +30,6 @@ build {
   ]
 
   provisioner "ansible" {
-    playbook_file = "/install_nginx.yml"
+    playbook_file = "install_nginx.yml"
   }
 }
