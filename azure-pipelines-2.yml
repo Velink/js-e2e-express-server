@@ -37,6 +37,7 @@ steps:
 
   - script: |
       docker run \
+        -v $(System.DefaultWorkingDirectory) \
         base-image sh -c '''\
         packer build aws-ubuntu.pkr.hcl
         '''
