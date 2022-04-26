@@ -30,6 +30,15 @@ build {
   ]
 
   provisioner "ansible" {
-    playbook_file = "/app/install_nginx.yml"
+    playbook_file = "./install_nginx.yml"
+  }
+
+  provisioner "file" {
+    source      = "/Users/velinkalenderski/Downloads/vsts-agent-osx-x64-2.202.0/_work/4/s/goss.yaml"
+    destination = "/home/ubuntu/"
+  }
+
+  provisioner "shell" {
+    inline = ["sudo chmod -R 777 /tmp/", "sudo chmod -R 777 /home/ubuntu/", "sudo chmod -R 777 /usr/local/bin/", "curl -L https://github.com/aelsabbahy/goss/releases/latest/download/goss-linux-amd64 -o /usr/local/bin/goss", "pwd", "sudo chmod +rx goss.yaml", "ls", "goss validate"]
   }
 }
