@@ -23,7 +23,8 @@ RUN apt-get -y install python3-pip && \
   && pip3 show ansible \
   && apt-get install openssh-client -y
 
-ENV PATH $PATH:/usr/local/lib/python3.10/dist-packages
+ENV ANSIBLE_DIR /usr/local/lib/python3.10/dist-packages
+ENV PATH $PATH:$ANSIBLE_DIR
 
 RUN type ansible
 
