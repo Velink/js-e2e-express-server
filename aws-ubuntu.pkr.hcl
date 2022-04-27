@@ -29,8 +29,12 @@ build {
     "source.amazon-ebs.ubuntu"
   ]
 
+  provisioner "shell" {
+    inline = ["sudo chmod -R 777 /app/"]
+  }
+
   provisioner "file" {
-    source = "install_nginx.yml"
+    source      = "install_nginx.yml"
     destination = "/app/"
   }
 
