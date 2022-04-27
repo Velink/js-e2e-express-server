@@ -30,7 +30,7 @@ build {
   ]
 
   provisioner "file" {
-    source = "install_nginx.yaml"
+    source = "install_nginx.yml"
     destination = "/app/"
   }
 
