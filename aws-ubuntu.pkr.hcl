@@ -21,7 +21,6 @@ source "amazon-ebs" "ubuntu" {
     owners      = ["099720109477"]
   }
   ssh_username = "ubuntu"
-  @REM temporary_key_pair_type = "ed25519"
 }
 
 build {
