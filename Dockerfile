@@ -26,3 +26,5 @@ RUN apt-get -y install python3-pip && \
 ENV PATH $PATH:/usr/local/lib/python3.10/dist-packages
 
 RUN type ansible
+
+RUN echo "$PATH"
