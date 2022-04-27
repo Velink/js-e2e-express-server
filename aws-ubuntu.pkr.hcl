@@ -28,11 +28,7 @@ build {
   sources = [
     "source.amazon-ebs.ubuntu"
   ]
-
-  provisioner "shell" {
-    inline = ["ssh-add ~/.ssh/id_rsa"]
-  }
-
+  
   provisioner "ansible" {
     playbook_file = "install_nginx.yml"
   }
