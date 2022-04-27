@@ -32,4 +32,4 @@ RUN type ansible
 RUN echo "$PATH"
 
 WORKDIR /app
-RUN sudo chmod -R 777 /app
+RUN chmod -R 777 /app
