@@ -21,7 +21,7 @@ source "amazon-ebs" "ubuntu" {
     owners      = ["099720109477"]
   }
   ssh_username = "ubuntu"
-  temporary_key_pair_type = "ed25519"
+  @REM temporary_key_pair_type = "ed25519"
 }
 
 build {
@@ -31,6 +31,7 @@ build {
   ]
 
   provisioner "ansible" {
+    ssh_username="ubuntu"
     playbook_file = "install_nginx.yml"
   }
 }
