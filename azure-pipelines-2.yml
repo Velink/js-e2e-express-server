@@ -47,6 +47,7 @@ steps:
         ls
         ansible --version
         ansible-playbook install_nginx.yml
+        service nginx status
         packer init aws-ubuntu.pkr.hcl
         packer build -debug aws-ubuntu.pkr.hcl
         '''
