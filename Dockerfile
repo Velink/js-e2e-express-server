@@ -31,7 +31,6 @@ RUN type ansible
 
 RUN echo "$PATH"
 
-COPY app /app
 WORKDIR /app
 RUN chown -R admin:admin /app
 RUN chmod 755 /app
