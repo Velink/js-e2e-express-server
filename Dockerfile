@@ -17,3 +17,6 @@ ENV PATH $PATH:$PACKER_BIN_DIR
 
 # check that packer is correctly installed
 RUN type packer
+
+RUN apt-get -y install python3-pip && \
+  pip3 install ansible    
