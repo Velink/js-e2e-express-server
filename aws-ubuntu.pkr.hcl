@@ -21,6 +21,7 @@ source "amazon-ebs" "ubuntu" {
     owners      = ["099720109477"]
   }
   ssh_username = "ec2-user"
+  temporary_key_pair_type = "ed25519"
 }
 
 build {
