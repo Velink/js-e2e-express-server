@@ -30,7 +30,7 @@ build {
   ]
 
   provisioner "ansible" {
-    ssh_username="ubuntu"
+    user="ubuntu"
     playbook_file = "install_nginx.yml"
   }
 }
