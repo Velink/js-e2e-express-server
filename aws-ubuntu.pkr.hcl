@@ -30,7 +30,6 @@ build {
   ]
 
   provisioner "ansible" {
-    extra_arguments = ["--extra-vars", "ansible_connection=docker"]
     playbook_file = "install_nginx.yml"
   }
 }
