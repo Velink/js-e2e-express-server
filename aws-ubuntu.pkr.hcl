@@ -29,8 +29,7 @@ build {
     "source.amazon-ebs.ubuntu"
   ]
 
-  provisioner "ansible" {
-    user="ubuntu"
-    playbook_file = "install_nginx.yml"
+  provisioner "ansible-local" {
+    playbook_file = "install_nginx.yml",
   }
 }
