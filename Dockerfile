@@ -18,6 +18,10 @@ ENV PATH $PATH:$PACKER_BIN_DIR
 # check that packer is correctly installed
 RUN type packer
 
-RUN apt-get -y install python3-pip && \
-  pip3 install ansible \
-  && apt-get install openssh-client -y
+RUN pip3 install --upgrade pip; \
+    pip3 install --upgrade virtualenv; \
+    pip3 install pywinrm[kerberos]; \
+    pip3 install pywinrm; \
+    pip3 install jmspath; \
+    pip3 install requests; \
+    python3 -m pip install ansible; 
