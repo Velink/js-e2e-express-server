@@ -35,4 +35,5 @@ RUN apt-get update && \
       apt-get -y install sudo
 
 WORKDIR /app
+RUN sudo chown -R username /app
 RUN chmod -R 777 /app
