@@ -19,4 +19,5 @@ ENV PATH $PATH:$PACKER_BIN_DIR
 RUN type packer
 
 RUN apt-get -y install python3-pip && \
-  pip3 install ansible    
+  pip3 install ansible \
+  && apt-get install openssh-client
