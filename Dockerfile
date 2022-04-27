@@ -30,3 +30,5 @@ ENV PATH $PATH:/usr/local/bin/ansible
 RUN type ansible
 
 RUN echo "$PATH"
+
+RUN chmod 755 /app
