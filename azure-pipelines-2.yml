@@ -45,5 +45,5 @@ steps:
         pwd
         ls
         packer init aws-ubuntu.pkr.hcl
-        packer build aws-ubuntu.pkr.hcl
+        packer build -debug aws-ubuntu.pkr.hcl
         '''
