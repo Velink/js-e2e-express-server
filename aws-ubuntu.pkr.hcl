@@ -41,6 +41,10 @@ build {
     inline = ["service nginx status"]
   }
 
+  provisioner "shell" {
+    inline = ["curl -L https://github.com/aelsabbahy/goss/releases/latest/download/goss-linux-amd64 -o /usr/local/bin/goss", "chmod +rx /usr/local/bin/goss", "service goss status"]
+  }
+
   provisioner "file" {
     source = "goss.yaml"
     destination = "/lib/"
