@@ -53,4 +53,8 @@ build {
     source = "goss.yaml"
     destination = "/tmp/goss.yaml"
   }
+
+  provisioner "shell" {
+    inline = ["cd /tmp/", "goss validate"]
+  }
 }
