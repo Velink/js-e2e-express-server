@@ -40,7 +40,7 @@ steps:
         -v /$(System.DefaultWorkingDirectory):/app \
         --env AWS_ACCESS_KEY_ID=$(AWS_ACCESS_KEY_ID) \
         --env AWS_SECRET_ACCESS_KEY=$(AWS_SECRET_ACCESS_KEY) \
-        --env PATH="/usr/local/bin/ansible"
+        --env PATH="/usr/local/bin/ansible" \
         base-image sh -c '''\
         cd /app
         printenv
