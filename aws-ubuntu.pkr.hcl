@@ -46,6 +46,6 @@ build {
   }
 
   provisioner "shell" {
-    inline = ["service goss status"]
+    inline = ["goss --version"]
   }
 }
