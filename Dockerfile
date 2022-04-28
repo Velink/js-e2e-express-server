@@ -24,7 +24,7 @@ RUN apt-get update && \
       add-apt-repository --yes --update ppa:ansible/ansible && \
       apt install -y ansible
 
-ENV PATH $PATH:"/usr/bin/"
+ENV PATH $PATH:"/usr/bin/ansible"
 
 RUN type ansible
 

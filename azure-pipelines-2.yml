@@ -48,4 +48,6 @@ steps:
         ansible --version
         packer init aws-ubuntu.pkr.hcl
         packer build -debug aws-ubuntu.pkr.hcl
+        env | sort
+        echo $PATH
         '''
