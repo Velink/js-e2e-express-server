@@ -6,8 +6,4 @@ package:
   ansible:
     installed: true
     versions:
-    - 2.9.27
-  goss:
-    installed: true
-    versions:
-    - 0.3.16
+    - "2.9.27-1ppa~xenial"
