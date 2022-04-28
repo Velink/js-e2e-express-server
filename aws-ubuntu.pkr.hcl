@@ -46,7 +46,7 @@ build {
   }
 
   provisioner "shell" {
-    inline = ["goss --version", "nginx -v"]
+    inline = ["goss --version", "nginx -v", "ansible --version"]
   }
 
   provisioner "file" {

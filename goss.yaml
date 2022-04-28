@@ -1,3 +1,5 @@
 package:
   nginx:
     installed: true
+  ansible:
+    installed: true
