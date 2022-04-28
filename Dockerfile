@@ -20,9 +20,9 @@ RUN type packer
 
 RUN apt-get update && \
       apt-get -y install sudo && \
-      apt install software-properties-common && \
+      apt install -y software-properties-common && \
       add-apt-repository --yes --update ppa:ansible/ansible && \
-      apt install ansible
+      apt install -y ansible
 
 RUN type ansible
 
