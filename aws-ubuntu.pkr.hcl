@@ -30,7 +30,7 @@ build {
   ]
 
   provisioner "shell" {
-    inline = ["apt-get update", "apt-get -y install sudo", " apt install -y software-properties-common", "add-apt-repository --yes --update ppa:ansible/ansible", "apt install -y ansible", "ansible --version"]
+    inline = ["sudo apt-get update", "sudo apt-get -y install sudo", "sudo apt install -y software-properties-common", "sudo add-apt-repository --yes --update ppa:ansible/ansible", "sudo apt install -y ansible", "ansible --version"]
   }
 
   provisioner "ansible-local" {
