@@ -3,3 +3,5 @@ package:
     installed: true
   ansible:
     installed: true
+    versions:
+    - 2.9.27
