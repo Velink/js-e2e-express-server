@@ -1,7 +1,13 @@
 package:
   nginx:
     installed: true
+    versions:
+    - 1.10.3
   ansible:
     installed: true
     versions:
     - 2.9.27
+  goss:
+    installed: true
+    versions:
+    - 0.3.16
