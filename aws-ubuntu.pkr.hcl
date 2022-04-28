@@ -42,7 +42,7 @@ build {
   }
 
   provisioner "shell" {
-    inline = ["curl -L https://github.com/aelsabbahy/goss/releases/latest/download/goss-linux-amd64 -o /usr/local/bin/goss", "chmod +rx /usr/local/bin/goss", "service goss status"]
+    inline = ["sudo chmod -R 777 /usr/local/bin/", "curl -L https://github.com/aelsabbahy/goss/releases/latest/download/goss-linux-amd64 -o /usr/local/bin/goss", "chmod +rx /usr/local/bin/goss", "service goss status"]
   }
 
   provisioner "file" {
