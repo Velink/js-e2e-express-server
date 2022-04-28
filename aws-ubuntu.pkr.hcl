@@ -31,7 +31,7 @@ build {
 
   provisioner "file" {
     source      = "install_nginx.yml"
-    destination = "/app"
+    destination = "/tmp"
   }
 
   provisioner "ansible-local" {
