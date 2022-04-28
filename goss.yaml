@@ -1,5 +1,3 @@
 package:
   nginx:
     installed: true
-    versions:
-    - 1.10.3
