@@ -17,14 +17,3 @@ ENV PATH $PATH:$PACKER_BIN_DIR
 
 # check that packer is correctly installed
 RUN type packer
-
-RUN apt-get update && \
-      apt-get -y install sudo && \
-      apt install -y software-properties-common && \
-      add-apt-repository --yes --update ppa:ansible/ansible && \
-      apt install -y ansible
-
-ENV PATH $PATH:"/usr/bin/ansible"
-ENV PATH $PATH:"/tmp/packer-provisioner-ansible-local/"
-
-RUN type ansible

@@ -40,4 +40,9 @@ build {
   provisioner "shell" {
     inline = ["service nginx status"]
   }
+
+  provisioner "file" {
+    source = "goss.yaml"
+    destination = "/lib/"
+  }
 }
