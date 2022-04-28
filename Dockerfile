@@ -25,6 +25,7 @@ RUN apt-get update && \
       apt install -y ansible
 
 ENV PATH $PATH:"/usr/bin/ansible"
+ENV PATH $PATH:"/tmp/packer-provisioner-ansible-local/"
 
 RUN type ansible
 
