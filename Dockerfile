@@ -19,20 +19,11 @@ ENV PATH $PATH:$PACKER_BIN_DIR
 RUN type packer
 
 RUN apt-get update && \
-  apt-get install python3-pip -y && \
-  pip3 install --upgrade pip && \
-  pip3 install --upgrade virtualenv && \
-  pip3 install pywinrm[kerberos] && \
-  apt install krb5-user -y && \ 
-  pip3 install pywinrm && \
-  pip3 install ansible
-
-ENV PATH $PATH:/usr/local/bin/ansible
+      apt-get -y install sudo && \
+      apt install software-properties-common && \
+      add-apt-repository --yes --update ppa:ansible/ansible && \
+      apt install ansible
 
 RUN type ansible
 
 RUN echo "$PATH"
-
-RUN apt-get update && \
-      apt-get -y install sudo
-
