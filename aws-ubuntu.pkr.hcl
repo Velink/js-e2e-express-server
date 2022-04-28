@@ -45,8 +45,7 @@ build {
     inline = ["sudo chmod -R 777 /usr/local/bin/", "ls -ld /usr/local/bin/", "curl -L https://github.com/aelsabbahy/goss/releases/latest/download/goss-linux-amd64 -o /usr/local/bin/goss", "chmod +rx /usr/local/bin/goss"]
   }
 
-  provisioner "file" {
-    source = "goss.yaml"
-    destination = "/home/"
+  provisioner "shell" {
+    inline = ["service goss status"]
   }
 }
