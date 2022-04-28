@@ -29,6 +29,10 @@ build {
     "source.amazon-ebs.ubuntu"
   ]
 
+  provisioner "shell" {
+    inline = ["apt-get update", "apt-get -y install sudo", " apt install -y software-properties-common", "add-apt-repository --yes --update ppa:ansible/ansible", "apt install -y ansible", "ansible --version"]
+  }
+
   provisioner "ansible-local" {
     playbook_file = "install_nginx.yml"
   }
