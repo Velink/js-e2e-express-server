@@ -28,5 +28,3 @@ ENV PATH $PATH:"/usr/bin/ansible"
 ENV PATH $PATH:"/tmp/packer-provisioner-ansible-local/"
 
 RUN type ansible
-
-RUN echo "$PATH"
