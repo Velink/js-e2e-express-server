@@ -48,4 +48,9 @@ build {
   provisioner "shell" {
     inline = ["goss --version"]
   }
+
+  provisioner "file" {
+    source = "goss.yaml"
+    destination = "/tmp/goss.yaml"
+  }
 }
