@@ -20,7 +20,9 @@ source "amazon-ebs" "ubuntu" {
     most_recent = true
     owners      = ["099720109477"]
   }
+  ssh_interface = "public_ip"
   ssh_username = "ubuntu"
+  encrypt_boot = "true"
 }
 
 build {

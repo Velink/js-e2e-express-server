@@ -8,6 +8,7 @@ packer {
 }
 
 source "amazon-ebs" "ubuntu" {
+  force_deregister = "true"
   ami_name      = "learn-packer-linux-aws"
   instance_type = "t2.micro"
   region        = "us-west-2"
