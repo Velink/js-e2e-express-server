@@ -17,7 +17,6 @@ source "amazon-ebs" "ubuntu" {
       root-device-type    = "ebs"
       virtualization-type = "hvm"
     }
-    force_deregister = "true"
     most_recent = true
     owners      = ["099720109477"]
   }
