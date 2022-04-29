@@ -8,7 +8,7 @@ packer {
 }
 
 source "amazon-ebs" "ubuntu" {
-  ami_name      = "ubunti-ami-with-ansible-nginx"
+  ami_name      = "ubuntu-ami-with-ansible-nginx"
   instance_type = "t2.micro"
   region        = "us-west-2"
   source_ami_filter {
