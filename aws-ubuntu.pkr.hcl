@@ -8,7 +8,7 @@ packer {
 }
 
 source "amazon-ebs" "ubuntu" {
-  ami_name      = "ubunti-ami-with-packer-ansible"
+  ami_name      = "ubunti-ami-with-ansible-nginx"
   instance_type = "t2.micro"
   region        = "us-west-2"
   source_ami_filter {
@@ -17,6 +17,7 @@ source "amazon-ebs" "ubuntu" {
       root-device-type    = "ebs"
       virtualization-type = "hvm"
     }
+    force_deregister = "true"
     most_recent = true
     owners      = ["099720109477"]
   }
