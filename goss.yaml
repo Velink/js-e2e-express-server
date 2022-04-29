@@ -6,4 +6,7 @@ package:
   ansible:
     installed: true
     versions:
-    - "2.9.27-1ppa~xenial"
+    - "2.9.27"
+process:
+  sshd:
+    running: true
